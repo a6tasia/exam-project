@@ -109,6 +109,14 @@ main {
   padding: 16px 64px 47px;
   .flex--text {
     max-width: 292px;
+    .shop--arrow {
+      @include align;
+      gap: 8px;
+      i {
+        color: $saletextcolor;
+        font-size: 16px;
+      }
+    }
     img {
       margin-left: 38px;
     }
@@ -211,7 +219,9 @@ section {
     line-height: 20px;
   }
 }
+
 .time {
+  align-items: last baseline;
   h2 {
     color: $maincolor;
     font-size: 36px;
@@ -219,15 +229,31 @@ section {
     font-family: inter;
     line-height: 48px;
     margin-right: 87px;
+    align-items: last baseline;
   }
-  @include align;
-  gap: 16px;
+  .row {
+    display: flex;
+    flex-direction: row;
+    margin-left: 540px;
+    gap: 8px;
 
+    .icon-arrow {
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+
+      background-color: $grey;
+      border-radius: 100px;
+      padding: 5px;
+    }
+  }
+  //   @include align;
+  gap: 16px;
+  display: flex;
   .timer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
 
     h3 {
       color: $maincolor;
@@ -254,7 +280,9 @@ section {
   }
 }
 .carousel {
+  margin-top: 40px;
   @include flex;
+
   .card {
     .card--img {
       @include align;
@@ -335,5 +363,302 @@ section {
     background-color: $saletextcolor;
     border-radius: 100px;
     padding: 5px;
+  }
+}
+.btn {
+  @include btn;
+  width: 234px;
+  margin: 60px auto 60px;
+  border-bottom: 1px solid $grey;
+}
+.categories {
+  @include align;
+  gap: 10px;
+  max-width: 200px;
+  margin-bottom: 24px;
+  .rectangle {
+    background-color: $secondarycolor;
+    height: 40px;
+    width: 20px;
+    border-radius: 4px;
+  }
+  p {
+    color: $secondarycolor;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Poppins;
+    line-height: 20px;
+  }
+}
+.row-categ {
+  display: flex;
+  flex-direction: row;
+  margin-left: 700px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 60px;
+  .icon-arrow {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+
+    background-color: $grey;
+    border-radius: 100px;
+    padding: 5px;
+  }
+}
+.line {
+  margin: 60px 0;
+  border-bottom: 1px solid $grey;
+}
+.category--cards {
+  @include flex;
+  .category--card {
+    border: 2px solid $grey;
+    border-radius: 4px;
+    padding: 25px 55px;
+    max-width: 170px;
+    min-height: 145px;
+    @include align;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    i {
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+      font-family: $secondaryfont;
+      font-weight: 400;
+      margin-top: 16px;
+    }
+    &:hover {
+      background-color: $secondarycolor;
+      i,
+      p {
+        color: $saletextcolor;
+      }
+      cursor: pointer;
+    }
+  }
+}
+.btn--view {
+  width: 159px;
+  margin-left: 600px;
+}
+.banner2 {
+  margin: 60px 0;
+
+  .black2 {
+    // background: radial-gradient(circle, rgba 225, 225, 225, 0.6) 0%,
+    //   rgba(225, 225, 225, 0) 70%;
+    h2 {
+      margin: 32px 0px;
+    }
+    max-width: 1500px;
+    padding: 69px 56px;
+    .flex--text {
+      .btn2 {
+        background-color: $button;
+        border-radius: 4px;
+        max-width: 171px;
+        padding: 16px 48px;
+        margin-top: 40px;
+        a {
+          color: $saletextcolor;
+          font-size: 16px;
+          font-weight: 500;
+          font-family: Poppins;
+          line-height: 24px;
+          text-decoration: none;
+        }
+      }
+      max-width: 443px;
+      .logo-text {
+        p {
+          color: $button;
+        }
+        h2 {
+          margin: 32px 0px;
+        }
+      }
+    }
+  }
+}
+.banner-timer {
+  display: flex;
+  gap: 24px;
+  .rgoli {
+    width: 60px;
+    height: 60px;
+    flex-direction: column;
+    align-items: center;
+    background-color: $saletextcolor;
+    border-radius: 100px;
+    display: flex;
+
+    justify-content: center;
+    h6 {
+      font-family: $secondaryfont;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+    h3 {
+      font-family: $secondaryfont;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+}
+.products {
+  @include flex;
+  align-items: baseline;
+  h2 {
+    color: $maincolor;
+    font-size: 36px;
+    font-weight: 600;
+    font-family: $mainfont;
+    line-height: 48px;
+  }
+}
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  .card {
+    .color2 {
+      background-color: $button;
+    }
+    .card--img {
+      @include align;
+      max-width: 270px;
+      min-height: 250px;
+      background-color: $grey;
+      padding: 49px;
+      border-radius: 4px;
+    }
+  }
+  .card-text {
+    p {
+      margin-top: 16px;
+      color: $maincolor;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: Poppins;
+      line-height: 24px;
+    }
+    .prise {
+      @include align;
+      gap: 12px;
+      margin: 8px 0;
+      h4 {
+        color: $maincolor;
+        opacity: 50%;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Poppins;
+        line-height: 24px;
+      }
+      h6 {
+        color: $secondarycolor;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Poppins;
+        line-height: 24px;
+      }
+      h5 {
+        color: $maincolor;
+        opacity: 50%;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Poppins;
+        line-height: 24px;
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+.margin {
+  margin-top: 140px;
+}
+.new {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+
+  .color-new {
+    img {
+      position: relative;
+    }
+    background-color: $maincolor;
+    padding: 24px 24px 0;
+
+    .text-flex {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+
+      z-index: 1;
+      h2 {
+        font-family: $mainfont;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+        color: $saletextcolor;
+      }
+      p {
+        font-family: $secondaryfont;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        color: $saletextcolor;
+        margin: 16px 0;
+      }
+      a {
+        text-underline-offset: 5px;
+        font-family: $secondaryfont;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        color: $saletextcolor;
+      }
+    }
+  }
+}
+
+// Grid Placement
+.ps5 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.women {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background: black;
+}
+
+.speakers {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.perfume {
+  grid-column: 3 / 3;
+  grid-row: 2 / 3;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .new-arrival {
+    display: flex;
+    flex-direction: column;
   }
 }

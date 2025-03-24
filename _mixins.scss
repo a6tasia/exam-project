@@ -7,3 +7,26 @@
   display: flex;
   align-items: center;
 }
+@mixin btn {
+  background-color: $secondarycolor;
+  border-radius: 4px;
+
+  padding: 16px 48px;
+  a {
+    color: $saletextcolor;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Poppins;
+    line-height: 24px;
+    text-decoration: none;
+  }
+  //   &:hover {
+  //     background-color: $saletextcolor;
+  //     border: 1px solid $secondarycolor;
+  //     box-sizing: border-box;
+  //     cursor: pointer;
+  //     a {
+  //       color: $secondarycolor;
+  //     }
+  //   }
+}
