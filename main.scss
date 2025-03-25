@@ -543,23 +543,47 @@ section {
   gap: 20px;
 
   .card {
-    .color2 {
-      background-color: $button;
-    }
-    .card--img {
-      @include align;
-      max-width: 270px;
-      min-height: 250px;
-      background-color: $grey;
-      padding: 49px;
-      border-radius: 4px;
-      .prodact {
-        height: 190px;
-        width: 180px;
-        align-items: center;
-        display: flex;
-        justify-content: center;
+  }
+
+  .color2 {
+    background-color: $button;
+  }
+  .card--img {
+    @include align;
+    max-width: 270px;
+    min-height: 250px;
+    background-color: $grey;
+    padding: 49px;
+    border-radius: 4px;
+    .prodact {
+      height: 190px;
+      width: 180px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      .add-to-card {
+        display: none;
       }
+      &:hover {
+        .add-to-card {
+          position: absolute;
+          display: flex;
+          background-color: $maincolor;
+          min-height: 41px;
+
+          p {
+            color: $maincolor;
+            font-size: 12px;
+            font-weight: 500;
+            font-family: $secondaryfont;
+            line-height: 12px;
+          }
+        }
+      }
+    }
+    .product-card {
+      position: relative;
+      overflow: hidden;
     }
   }
   .card-text {
@@ -612,6 +636,11 @@ section {
   grid-template-rows: auto auto;
   gap: 20px;
   margin-bottom: 140px;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+  }
 
   .color-new {
     img {
@@ -724,11 +753,7 @@ section {
     }
   }
 }
-// footer {
-//   background-color: $maincolor;
-//   padding: 80px 135px;
-
-// }
+// footer
 .footer {
   background-color: $maincolor;
   color: white;
@@ -918,9 +943,90 @@ section {
   //     @include align;
   //   }
 }
-.person {
-  .imgdiv {
-    width: 294px;
-    height: 397px;
+.persons {
+  @include flex;
+  .person {
+    h2 {
+      font-size: 32px;
+      color: $maincolor;
+      font-weight: 500;
+      line-height: 30px;
+      font-family: $mainfont;
+      margin: 32px 0 8px;
+    }
+    h3 {
+      font-size: 16px;
+      color: $maincolor;
+      font-weight: 400;
+      line-height: 24px;
+      font-family: $secondaryfont;
+      margin-bottom: 16px;
+    }
+    .imgbackground {
+      background-color: $grey;
+      padding: 33px 38px 0;
+    }
+    .imgdiv {
+      width: 294px;
+      height: 397px;
+    }
+    .app-icons {
+      gap: 20px;
+      font-size: 20px;
+      color: $maincolor;
+    }
+  }
+  margin-bottom: 140px;
+}
+.wishlist {
+  @include flex;
+  align-items: center;
+  p {
+    font-size: 20px;
+    color: $maincolor;
+    font-weight: 400;
+    line-height: 26px;
+    font-family: $secondaryfont;
+    margin-bottom: 16px;
+  }
+  .btn-color {
+    margin-left: 880px;
+    border: 1px solid $maincolor;
+    background-color: $saletextcolor;
+    a {
+      color: $maincolor;
+    }
+  }
+}
+.fy {
+  @include flex;
+  gap: 10px;
+  .align {
+    @include align;
+  }
+  .rectangle {
+    margin-right: 16px;
+  }
+  .btn-color {
+    margin-left: 860px;
+    border: 1px solid $maincolor;
+    background-color: $saletextcolor;
+    a {
+      color: $maincolor;
+    }
+  }
+  margin-bottom: 24px;
+  .rectangle {
+    background-color: $secondarycolor;
+    height: 40px;
+    width: 20px;
+    border-radius: 4px;
+  }
+  p {
+    color: $secondarycolor;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Poppins;
+    line-height: 20px;
   }
 }
