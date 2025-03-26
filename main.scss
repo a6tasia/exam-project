@@ -542,9 +542,6 @@ section {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 
-  .card {
-  }
-
   .color2 {
     background-color: $button;
   }
@@ -555,31 +552,13 @@ section {
     background-color: $grey;
     padding: 49px;
     border-radius: 4px;
+
     .prodact {
       height: 190px;
       width: 180px;
       align-items: center;
       display: flex;
       justify-content: center;
-      .add-to-card {
-        display: none;
-      }
-      &:hover {
-        .add-to-card {
-          position: absolute;
-          display: flex;
-          background-color: $maincolor;
-          min-height: 41px;
-
-          p {
-            color: $maincolor;
-            font-size: 12px;
-            font-weight: 500;
-            font-family: $secondaryfont;
-            line-height: 12px;
-          }
-        }
-      }
     }
     .product-card {
       position: relative;
@@ -691,7 +670,7 @@ section {
 }
 
 .women {
-  grid-column: 2 / 3;
+  grid-column: 2 / 4;
   grid-row: 1 / 2;
 }
 
@@ -701,7 +680,7 @@ section {
 }
 
 .perfume {
-  grid-column: 3 / 3;
+  grid-column: 3 / 4;
   grid-row: 2 / 3;
 }
 

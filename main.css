@@ -585,22 +585,6 @@ section {
   display: flex;
   justify-content: center;
 }
-.products-container .card--img .prodact .add-to-card {
-  display: none;
-}
-.products-container .card--img .prodact:hover .add-to-card {
-  position: absolute;
-  display: flex;
-  background-color: black;
-  min-height: 41px;
-}
-.products-container .card--img .prodact:hover .add-to-card p {
-  color: black;
-  font-size: 12px;
-  font-weight: 500;
-  font-family: Poppins;
-  line-height: 12px;
-}
 .products-container .card--img .product-card {
   position: relative;
   overflow: hidden;
@@ -706,7 +690,7 @@ section {
 }
 
 .women {
-  grid-column: 2/3;
+  grid-column: 2/4;
   grid-row: 1/2;
 }
 
@@ -716,7 +700,7 @@ section {
 }
 
 .perfume {
-  grid-column: 3/3;
+  grid-column: 3/4;
   grid-row: 2/3;
 }
 
