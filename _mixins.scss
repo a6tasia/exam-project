@@ -20,13 +20,9 @@
     line-height: 24px;
     text-decoration: none;
   }
-  //   &:hover {
-  //     background-color: $saletextcolor;
-  //     border: 1px solid $secondarycolor;
-  //     box-sizing: border-box;
-  //     cursor: pointer;
-  //     a {
-  //       color: $secondarycolor;
-  //     }
-  //   }
+}
+@mixin text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
 }
