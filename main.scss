@@ -77,6 +77,9 @@
   .search--icons {
     @include flex;
     gap: 16px;
+    .list {
+      display: none;
+    }
     .search {
       background-color: $grey;
       border-radius: 4px;
@@ -464,8 +467,6 @@ section {
   margin: 60px 0;
 
   .black2 {
-    // background: radial-gradient(circle, rgba 225, 225, 225, 0.6) 0%,
-    //   rgba(225, 225, 225, 0) 70%;
     h2 {
       margin: 32px 0px;
     }
@@ -626,7 +627,7 @@ section {
     background-color: $maincolor;
     justify-content: flex-end;
     .child-ps {
-      bottom: 5%;
+      bottom: 10%;
       left: 5%;
     }
     .child-woman {
@@ -634,8 +635,8 @@ section {
       left: 5%;
     }
     .child-seaker {
-      bottom: 5%;
-      left: 5%;
+      bottom: 10%;
+      left: 10%;
     }
 
     .text-flex {
@@ -931,47 +932,66 @@ section {
     border: 1px solid $maincolor;
     padding: 30px 30px;
     align-items: center;
+    width: 270px;
   }
+}
+.scrol {
+  .persons {
+    @include flex;
+    margin-bottom: 60px;
+    .person {
+      h2 {
+        font-size: 32px;
+        color: $maincolor;
+        font-weight: 500;
+        line-height: 30px;
+        font-family: $mainfont;
+        margin: 32px 0 8px;
+      }
+      h3 {
+        font-size: 16px;
+        color: $maincolor;
+        font-weight: 400;
+        line-height: 24px;
+        font-family: $secondaryfont;
+        margin-bottom: 16px;
+      }
+      .imgbackground {
+        background-color: $grey;
+        padding: 33px 38px 0;
+      }
+      .imgdiv {
+        width: 294px;
+        height: 397px;
+      }
+      .app-icons {
+        gap: 20px;
+        font-size: 20px;
+        color: $maincolor;
+      }
+    }
+  }
+  .full-stops {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 140px;
+    .mini-circle {
+      border-radius: 100%;
+      padding: 5px;
+      background-color: $grey2;
+      box-sizing: border-box;
+      border: 4px solid $grey2;
+    }
 
-  //   .hover {
-  //     @include align;
-  //   }
-}
-.persons {
-  @include flex;
-  .person {
-    h2 {
-      font-size: 32px;
-      color: $maincolor;
-      font-weight: 500;
-      line-height: 30px;
-      font-family: $mainfont;
-      margin: 32px 0 8px;
-    }
-    h3 {
-      font-size: 16px;
-      color: $maincolor;
-      font-weight: 400;
-      line-height: 24px;
-      font-family: $secondaryfont;
-      margin-bottom: 16px;
-    }
-    .imgbackground {
-      background-color: $grey;
-      padding: 33px 38px 0;
-    }
-    .imgdiv {
-      width: 294px;
-      height: 397px;
-    }
-    .app-icons {
-      gap: 20px;
-      font-size: 20px;
-      color: $maincolor;
+    .active-circle {
+      background-color: $secondarycolor;
+      border: 4px solid $grey2;
     }
   }
-  margin-bottom: 140px;
 }
+
 .wishlist {
   @include flex;
   align-items: center;
@@ -1022,5 +1042,190 @@ section {
     font-weight: 600;
     font-family: Poppins;
     line-height: 20px;
+  }
+}
+
+//responive
+@media screen and (max-width: 800px) {
+  .header {
+    padding: 0 80px;
+    height: 50px;
+  }
+  .nav {
+    padding: 30px 20px 16px;
+    margin-bottom: 30px;
+    h1 {
+      font-size: 20px;
+    }
+    nav {
+      display: none;
+    }
+    .search--icons {
+      .list {
+        display: flex;
+      }
+    }
+  }
+  //about page
+  #main {
+    padding-left: 70px;
+  }
+  main {
+    margin-bottom: 80px;
+    .text-img {
+      margin-top: 32px;
+      flex-direction: column;
+      .story {
+        h1 {
+          font-size: 42px;
+        }
+      }
+      .responsive-img {
+        transform: scale(0.8);
+      }
+    }
+  }
+  //cards
+  section {
+    padding: 0px 80px;
+
+    .services {
+      margin-left: 70px;
+      gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      .box-about {
+        border: 1px solid $maincolor;
+        padding: 16px;
+        width: 250px;
+      }
+      .box {
+        .circle {
+          padding: 10px;
+          border: 10px;
+          i {
+            font-size: 32px;
+          }
+        }
+        h2 {
+          font-size: 18px;
+          line-height: 24px;
+          margin: 16px 0 8px;
+        }
+      }
+    }
+  }
+  //persons
+  section {
+    padding: 0 80px;
+    .scrol {
+      .persons {
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        .person {
+          margin-bottom: 20px;
+          h2 {
+            font-size: 20px;
+            line-height: 28px;
+            margin: 24px 0 8px;
+            font-weight: 500;
+          }
+          h3 {
+            margin-bottom: 8px;
+            line-height: 20px;
+          }
+
+          .imgbackground {
+            padding-bottom: 0px;
+          }
+          .imgdiv {
+            img {
+              transform: scale(0.9);
+            }
+          }
+        }
+      }
+      .full-stops {
+        gap: 10px;
+        margin-bottom: 80px;
+        .mini-circle {
+          padding: 4px;
+
+          box-sizing: border-box;
+          border: 3px solid $grey2;
+        }
+
+        .active-circle {
+          border: 3px solid $grey2;
+        }
+      }
+    }
+  }
+  //service
+  section {
+    padding: 0px 0px;
+    justify-content: center;
+    .responsive-div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 80px;
+      margin-left: 0;
+    }
+  }
+  //wishlist
+  main {
+    padding: 0px 80px;
+    .wishlist {
+      p {
+        font-size: 16px;
+      }
+      .btn-color {
+        justify-content: center;
+        max-width: 200px;
+        a {
+          font-size: 12px;
+          font-weight: 500;
+
+          line-height: 18px;
+        }
+        padding: 8px 20px;
+        margin-left: 297px;
+      }
+    }
+  }
+  //main page
+  section {
+    .time {
+      h2 {
+        font-size: 28px;
+        line-height: 36px;
+        margin-right: 60px;
+      }
+      .timer {
+        h6 {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 18px;
+        }
+        h3 {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+      }
+    }
+    .today {
+      .rectangle {
+        height: 30px;
+        width: 15px;
+      }
+    }
+  }
+  .categories {
+    .rectangle {
+      height: 30px;
+      width: 15px;
+    }
   }
 }
