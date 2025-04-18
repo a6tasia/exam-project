@@ -491,6 +491,9 @@ section {
 .banner2 {
   margin: 60px 0;
 }
+.banner2 .responsive img {
+  display: none;
+}
 .banner2 .black2 {
   max-width: 1500px;
   padding: 69px 56px;
@@ -726,7 +729,7 @@ section {
   grid-row: 2/3;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .new-arrival {
     display: flex;
     flex-direction: column;
@@ -1237,27 +1240,391 @@ section {
   section {
     padding: 0 80px;
   }
-  section .time h2 {
-    font-size: 28px;
-    line-height: 36px;
-    margin-right: 60px;
+  section .fy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
   }
-  section .time .timer h6 {
+  section .fy .align {
+    display: flex;
+    align-items: center;
+  }
+  section .fy .align p {
+    margin-right: 200px;
+  }
+  section .fy .rectangle {
+    width: 15px;
+    height: 30px;
+  }
+  section .fy .btn {
+    background-color: #db4444;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 28px;
+    margin: 0;
+  }
+  section .fy .btn a {
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Poppins;
+    line-height: 20px;
+    text-decoration: none;
+  }
+  section .fy .btn-color {
+    margin-left: 0;
+    border: 1px solid black;
+    background-color: white;
+  }
+  section .fy .btn-color a {
+    color: black;
+  }
+  section .carousel {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section .carousel .prodact {
+    height: 150px;
+    width: 140px;
+  }
+  section .carousel .prodact img {
+    transform: scale(0.8);
+  }
+  section .carousel .card .card--img {
+    display: flex;
+    align-items: center;
+    max-width: 280px;
+    min-height: 220px;
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 4px;
+  }
+  section .carousel .card-text p {
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
   }
-  section .time .timer h3 {
-    font-size: 24px;
-    font-weight: 700;
+  section .carousel .card-text .prise h4 {
+    font-size: 16px;
     line-height: 24px;
   }
-  section .today .rectangle {
-    height: 30px;
-    width: 15px;
+  section .carousel .card-text .prise h6 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
   }
-  .categories .rectangle {
-    height: 30px;
+  section .carousel .card-text .prise h5 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  .sidebar-banner .sidebar {
+    display: none;
+  }
+  .sidebar-banner .black {
+    max-width: 100%;
+    padding: 16px 40px 32px;
+  }
+  .sidebar-banner .black .flex--text {
+    max-width: 292px;
+  }
+  .sidebar-banner .black .flex--text img {
+    margin-left: 0px;
+  }
+  .sidebar-banner .black .flex--text h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 30px;
+    margin: 10px 0;
+  }
+  .sidebar-banner .black .flex--text .shop--arrow {
+    gap: 6px;
+  }
+  .sidebar-banner .black .flex--text .shop--arrow p {
+    font-size: 14px;
+  }
+  .sidebar-banner .black .flex--text .shop--arrow i {
+    color: white;
+    font-size: 16px;
+  }
+  .sidebar-banner .black .flex--text .logo-text {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: white;
+  }
+  .sidebar-banner .black .flex--text .logo-text i {
+    font-size: 40px;
+    color: white;
+    display: flex;
+  }
+  .sidebar-banner .black img {
+    width: 60%;
+  }
+  section .today p {
+    font-size: 12px;
+  }
+  section .today .rectangle {
     width: 15px;
+    height: 30px;
+  }
+  section .time--section .time h2 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-right: 200px;
+  }
+  section .time--section .time .timer h6 {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+  section .time--section .time .timer h3 {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  section .time--section .time .none {
+    display: none;
+  }
+  section .carousel {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section .carousel .prodact {
+    height: 150px;
+    width: 140px;
+  }
+  section .carousel .prodact img {
+    transform: scale(0.8);
+  }
+  section .carousel .card .card--img {
+    display: flex;
+    align-items: center;
+    max-width: 280px;
+    min-height: 220px;
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 4px;
+  }
+  section .carousel .card-text p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  section .carousel .card-text .prise h4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  section .carousel .card-text .prise h6 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  section .carousel .card-text .prise h5 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  section .carousel {
+    margin-top: 20px;
+  }
+  section .categories p {
+    font-size: 12px;
+  }
+  section .categories .rectangle {
+    width: 15px;
+    height: 30px;
+  }
+  section .time h2 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+  }
+  section .time .row-categ {
+    display: none;
+  }
+  section .category--cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section .category--cards .category--card {
+    border: 2px solid #f5f5f5;
+    border-radius: 4px;
+    padding: 25px 55px;
+    max-width: 170px;
+    min-height: 145px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  section .category--cards .category--card i {
+    font-size: 24px;
+  }
+  section .category--cards .category--card p {
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 400;
+    margin-top: 16px;
+  }
+  section .time {
+    margin-bottom: 20px;
+  }
+  section .time h2 {
+    margin: 0;
+  }
+  section .time .btn--view {
+    margin: 0 0 0 200px;
+    background-color: #db4444;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 28px;
+  }
+  section .time .btn--view a {
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Poppins;
+    line-height: 20px;
+    text-decoration: none;
+  }
+  section .carousel {
+    margin-top: 0;
+  }
+  .banner2 .black {
+    padding: 30px;
+  }
+  .banner2 .black .flex--text .btn2 {
+    background-color: #db4444;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 28px;
+    background-color: #00ff66;
+  }
+  .banner2 .black .flex--text .btn2 a {
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Poppins;
+    line-height: 20px;
+    text-decoration: none;
+  }
+  .banner2 .black .flex--text h2 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+  .banner2 .black .flex--text .banner-timer {
+    display: flex;
+    gap: 18px;
+  }
+  .banner2 .black .flex--text .banner-timer .rgoli {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .banner2 .black .flex--text .banner-timer .rgoli h6 {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+  .banner2 .black .flex--text .banner-timer .rgoli h3 {
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  .banner2 img {
+    display: none;
+  }
+  .banner2 .responsive {
+    width: 298px;
+    height: 300px;
+  }
+  .banner2 .responsive img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  section .products h2 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+  section .products .row-categ {
+    display: none;
+  }
+  section .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+  }
+  section .products-container :nth-child(5) {
+    display: none;
+  }
+  section .products-container :nth-child(6) {
+    display: none;
+  }
+  section .products-container :nth-child(7) {
+    display: none;
+  }
+  section .products-container :nth-child(8) {
+    display: none;
+  }
+  section .products-container .prodact {
+    height: 150px;
+    width: 140px;
+  }
+  section .products-container .prodact img {
+    transform: scale(0.8);
+  }
+  section .products-container .card .card--img {
+    display: flex;
+    align-items: center;
+    max-width: 280px;
+    min-height: 220px;
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 4px;
+  }
+  section .products-container .card-text p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  section .products-container .card-text .prise h4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  section .products-container .card-text .prise h6 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  section .products-container .card-text .prise h5 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  section .products {
+    align-items: center;
+  }
+  section .new {
+    margin-top: 0px;
   }
 }/*# sourceMappingURL=main.css.map */

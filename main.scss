@@ -57,10 +57,6 @@
     gap: 48px;
     display: flex;
     justify-content: space-between;
-    // :nth-child(1) {
-    //     text-decoration: underline;
-    //     text-underline-offset: 3px;
-    // }
   }
   a {
     text-decoration: none;
@@ -72,7 +68,6 @@
   .active {
     text-decoration: underline;
     text-underline-offset: 3px;
-    // color: $grey2;
   }
   .search--icons {
     @include flex;
@@ -465,7 +460,11 @@ section {
 }
 .banner2 {
   margin: 60px 0;
-
+  .responsive {
+    img {
+      display: none;
+    }
+  }
   .black2 {
     h2 {
       margin: 32px 0px;
@@ -701,7 +700,7 @@ section {
 }
 
 // Responsive Design
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .new-arrival {
     display: flex;
     flex-direction: column;
@@ -1248,42 +1247,427 @@ section {
       }
     }
   }
-  //card2
+
   section {
     padding: 0 80px;
-  }
-  //main page
-  section {
-    .time {
-      h2 {
-        font-size: 28px;
-        line-height: 36px;
-        margin-right: 60px;
+    .fy {
+      @include flex;
+      gap: 10px;
+      .align {
+        @include align;
+        p {
+          margin-right: 200px;
+        }
       }
-      .timer {
-        h6 {
+      .rectangle {
+        width: 15px;
+        height: 30px;
+      }
+      .btn {
+        @include responsive-btn;
+        margin: 0;
+      }
+      .btn-color {
+        margin-left: 0;
+        border: 1px solid $maincolor;
+        background-color: $saletextcolor;
+        a {
+          color: $maincolor;
+        }
+      }
+      margin-bottom: 20px;
+    }
+    .carousel {
+      display: flex;
+      flex-wrap: wrap;
+      .prodact {
+        height: 150px;
+        width: 140px;
+
+        img {
+          transform: scale(0.8);
+        }
+      }
+      .card {
+        .card--img {
+          @include align;
+          max-width: 280px;
+          min-height: 220px;
+          background-color: $grey;
+          padding: 30px;
+          border-radius: 4px;
+        }
+      }
+      .card-text {
+        p {
           font-size: 12px;
           font-weight: 500;
           line-height: 18px;
         }
-        h3 {
-          font-size: 24px;
-          font-weight: 700;
-          line-height: 24px;
+        .prise {
+          h4 {
+            font-size: 16px;
+
+            line-height: 24px;
+          }
+          h6 {
+            font-size: 12px;
+            font-weight: 500;
+
+            line-height: 18px;
+          }
+          h5 {
+            font-size: 12px;
+            font-weight: 500;
+
+            line-height: 18px;
+          }
         }
       }
     }
-    .today {
-      .rectangle {
-        height: 30px;
-        width: 15px;
+  }
+  //main page
+  //sidebar
+  .sidebar-banner {
+    .sidebar {
+      display: none;
+    }
+    .black {
+      max-width: 100%;
+      padding: 16px 40px 32px;
+      .flex--text {
+        max-width: 292px;
+        img {
+          margin-left: 0px;
+        }
+        h2 {
+          color: white;
+          font-size: 28px;
+          font-weight: 500;
+          line-height: 30px;
+          margin: 10px 0;
+        }
+        .shop--arrow {
+          p {
+            font-size: 14px;
+          }
+          gap: 6px;
+          i {
+            color: white;
+            font-size: 16px;
+          }
+        }
+        .logo-text {
+          i {
+            font-size: 40px;
+            color: $saletextcolor;
+            display: flex;
+          }
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          color: white;
+        }
+      }
+      img {
+        width: 60%;
       }
     }
   }
-  .categories {
-    .rectangle {
-      height: 30px;
-      width: 15px;
+  //cards 1
+  section {
+    .today {
+      p {
+        font-size: 12px;
+      }
+      .rectangle {
+        width: 15px;
+        height: 30px;
+      }
+    }
+    .time--section {
+      .time {
+        h2 {
+          font-size: 24px;
+          line-height: 28px;
+          margin-right: 200px;
+        }
+        .timer {
+          h6 {
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 500;
+          }
+          h3 {
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: 700;
+          }
+        }
+        .none {
+          display: none;
+        }
+      }
+    }
+  }
+
+  section {
+    .carousel {
+      display: flex;
+      flex-wrap: wrap;
+      .prodact {
+        height: 150px;
+        width: 140px;
+
+        img {
+          transform: scale(0.8);
+        }
+      }
+      .card {
+        .card--img {
+          @include align;
+          max-width: 280px;
+          min-height: 220px;
+          background-color: $grey;
+          padding: 30px;
+          border-radius: 4px;
+        }
+      }
+      .card-text {
+        p {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 18px;
+        }
+        .prise {
+          h4 {
+            font-size: 16px;
+
+            line-height: 24px;
+          }
+          h6 {
+            font-size: 12px;
+            font-weight: 500;
+
+            line-height: 18px;
+          }
+          h5 {
+            font-size: 12px;
+            font-weight: 500;
+
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+  //cards 2
+  section {
+    .carousel {
+      margin-top: 20px;
+    }
+    .categories {
+      p {
+        font-size: 12px;
+      }
+      .rectangle {
+        width: 15px;
+        height: 30px;
+      }
+    }
+    .time {
+      h2 {
+        font-size: 24px;
+        line-height: 28px;
+        margin-right: 200px;
+        margin-bottom: 20px;
+      }
+      .row-categ {
+        display: none;
+      }
+    }
+    .category--cards {
+      display: flex;
+      flex-wrap: wrap;
+
+      .category--card {
+        border: 2px solid $grey;
+        border-radius: 4px;
+        padding: 25px 55px;
+        max-width: 170px;
+        min-height: 145px;
+        @include align;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        i {
+          font-size: 24px;
+        }
+        p {
+          font-size: 16px;
+          font-family: $secondaryfont;
+          font-weight: 400;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+  section {
+    .time {
+      margin-bottom: 20px;
+
+      h2 {
+        margin: 0;
+      }
+      .btn--view {
+        margin: 0 0 0 200px;
+        @include responsive-btn;
+      }
+    }
+    .carousel {
+      margin-top: 0;
+    }
+  }
+  //baner2
+
+  .banner2 {
+    .black {
+      padding: 30px;
+      .flex--text {
+        .btn2 {
+          @include responsive-btn;
+          background-color: $button;
+        }
+        h2 {
+          font-size: 30px;
+          font-weight: 500;
+          line-height: 30px;
+        }
+        .banner-timer {
+          display: flex;
+          gap: 18px;
+          .rgoli {
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+            background-color: $saletextcolor;
+            border-radius: 100px;
+            display: flex;
+
+            justify-content: center;
+            h6 {
+              font-family: $secondaryfont;
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 18px;
+            }
+            h3 {
+              font-family: $secondaryfont;
+              font-size: 11px;
+              font-weight: 400;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+    }
+    img {
+      display: none;
+    }
+    .responsive {
+      width: 298px;
+      height: 300px;
+      img {
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  //card section3
+  section {
+    .products {
+      h2 {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 20px;
+      }
+      .row-categ {
+        display: none;
+      }
+    }
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 60px;
+      :nth-child(5) {
+        display: none;
+      }
+      :nth-child(6) {
+        display: none;
+      }
+      :nth-child(7) {
+        display: none;
+      }
+      :nth-child(8) {
+        display: none;
+      }
+      .prodact {
+        height: 150px;
+        width: 140px;
+
+        img {
+          transform: scale(0.8);
+        }
+      }
+      .card {
+        .card--img {
+          @include align;
+          max-width: 280px;
+          min-height: 220px;
+          background-color: $grey;
+          padding: 30px;
+          border-radius: 4px;
+        }
+      }
+      .card-text {
+        p {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 18px;
+        }
+        .prise {
+          h4 {
+            font-size: 16px;
+
+            line-height: 24px;
+          }
+          h6 {
+            font-size: 12px;
+            font-weight: 500;
+
+            line-height: 18px;
+          }
+          h5 {
+            font-size: 12px;
+            font-weight: 500;
+
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+  //Featured
+  section {
+    .products {
+      align-items: center;
+    }
+    .new {
+      margin-top: 0px;
     }
   }
 }

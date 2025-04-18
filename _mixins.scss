@@ -26,3 +26,18 @@
   display: flex;
   flex-direction: column;
 }
+@mixin responsive-btn {
+  background-color: $secondarycolor;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 28px;
+  a {
+    color: $saletextcolor;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Poppins;
+    line-height: 20px;
+    text-decoration: none;
+  }
+}
